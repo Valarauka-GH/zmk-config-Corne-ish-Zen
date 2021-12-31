@@ -12,6 +12,7 @@
 #define DEFAULT 0
 #define NUMBER  1
 #define SYMBOL  2
+#define ADJUST  3
 
 / {
         keymap {
@@ -31,6 +32,7 @@
              &kp LGUI &mo NUMBER &kp SPACE   &kp RET &mo SYMBOL &kp RALT
                         >;
                 };
+
                 lower_layer {
                         label = "NUMBER";
 // -----------------------------------------------------------------------------------------
@@ -60,5 +62,31 @@
                     	     &trans   &trans   &trans      &trans    &trans    &trans
                         >;
                 };
+
+                adjust_layer {
+                        label = "ADJUST";
+// -----------------------------------------------------------------------------------------
+// |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |      |
+// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
+// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+//                    |     |     |     |   |     |     |     |
+                        bindings = <
+   &trans     &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &trans
+   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
+   &trans     &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
+                          	        &trans       &trans       &trans         &trans   &trans   &trans
+                        >;
+                };
+
         };
+};
+
+/ {
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <NUMBER SYMBOL>;
+            then-layer = <ADJUST>;
+        };
+    };
 };
