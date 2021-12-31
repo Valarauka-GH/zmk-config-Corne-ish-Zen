@@ -21,15 +21,15 @@
                 default_layer {
                         label = "QWERTY";
 // -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  ;  | BKSP |
-// | CTRL |  A  |  R  |  S  |  T  |  G  |   |  M  |  N   |  E  |  I  |  O  |  '   |
-// | SHFT |  Z  |  X  |  C  |  D  |  V  |   |  K  |  H   |  ,  |  .  |  /  | ESC  |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+// | ESC  |  Q  |  W  |  F  |  P  |  B  |    |  J  |  L   |  U  |  Y  |  ;  |   \   |
+// | BKSP |  A  |  R  |  S  |  T  |  G  |    |  M  |  N   |  E  |  I  |  O  |   '   |
+// | CTRL |  Z  |  X  |  C  |  D  |  V  |    |  K  |  H   |  ,  |  .  |  /  | ALT/` |
+//          | GUI/DEL | SHIFT/SPC | NUM |    | SYM | RET  | TAB |
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   &kp SEMI &kp BSPC
-   &kp LCTRL &kp A &kp R &kp S &kp T &kp G   &kp M &kp N  &kp E     &kp I   &kp O    &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp D &kp V   &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &kp ESC
-             &kp LGUI &mo NUMBER &kp SPACE   &kp RET &mo SYMBOL &kp RALT
+   &kp ESC   &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   &kp SEMI &kp BSLH
+   &kp BSPC  &kp A &kp R &kp S &kp T &kp G   &kp M &kp N  &kp E     &kp I   &kp O    &kp SQT
+   &kp LCTRL &kp Z &kp X &kp C &kp D &kp V   &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &mt LALT GRAVE
+   &mt LGUI DEL &mt LSHFT SPACE &mo NUMBER   &mo SYMBOL &kp RET &kp TAB
                         >;
                 };
 
