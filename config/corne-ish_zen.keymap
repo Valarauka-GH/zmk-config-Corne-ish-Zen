@@ -33,7 +33,7 @@
                 };
 
                 number_layer {
-                        label = "NUMBER";
+                        label = "NUM";
 // -----------------------------------------------------------------------------------------
 // |      | F1  | F2  | F3  | F4  | F5  |   | F6  | F7  | F8  | F9  | F10 |      |
 // |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |      |
@@ -47,18 +47,18 @@
                         >;
                 };
 
-                symbol_layer {
-                        label = "SYMBOL";
+                nav_layer {
+                        label = "NAV";
 // -----------------------------------------------------------------------------------------
-// |      |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |      |
-// |      |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// |      |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
+// |      |     |     | UP  |     |     |   |     | PGUP| HOME|     |     |      |
+// |      |     | LT  | DN  | RT  |     |   |     | PGDN| END |     |     |      |
+// |      |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
-   &trans    &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &trans
-   &trans    &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
-   &trans    &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
-                    	     &trans   &trans   &trans      &trans    &trans    &trans
+   &trans  &trans   &trans   &kp UP   &trans    &trans      &trans  &kp PG_UP &kp HOME &trans  &trans  &trans
+   &trans  &trans   &kp LEFT &kp DOWN &kp RIGHT &trans      &trans  &kp PG_DN &kp END  &trans  &trans  &trans
+   &trans  &trans   &trans   &trans   &trans    &trans      &trans  &trans    &trans   &trans  &trans  &trans
+                    	     &trans   &trans    &trans      &trans  &trans    &trans
                         >;
                 };
 
