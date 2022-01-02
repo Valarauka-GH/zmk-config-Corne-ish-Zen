@@ -9,9 +9,9 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-#define NUMBER  1
-#define SYMBOL  2
-#define ADJUST  3
+#define LYR_NUM 1
+#define LYR_NAV 2
+#define LYR_ADJ 3
 
 / {
         keymap {
@@ -20,15 +20,15 @@
                 base_layer {
                         label = "BASE";
 // -----------------------------------------------------------------------------------------
-// | ESC  |  Q  |  W  |  F  |  P  |  B  |    |  J  |  L   |  U  |  Y  |  ;  |   \   |
-// | BKSP |  A  |  R  |  S  |  T  |  G  |    |  M  |  N   |  E  |  I  |  O  |   '   |
-// | CTRL |  Z  |  X  |  C  |  D  |  V  |    |  K  |  H   |  ,  |  .  |  /  | ALT/` |
-//          | GUI/DEL | SHIFT/SPC | NUM |    | SYM | RET  | TAB |
+// | ESC  |  Q  |  W  |  F  |  P  |  B  |     |  J  |  L   |  U  |  Y  |  ;  |   \   |
+// | BKSP |  A  |  R  |  S  |  T  |  G  |     |  M  |  N   |  E  |  I  |  O  |   '   |
+// | CTRL |  Z  |  X  |  C  |  D  |  V  |     |  K  |  H   |  ,  |  .  |  /  | ALT/` |
+//          | GUI/DEL | SHIFT/SPC | NUM |<ADJ>| NAV | RET  | TAB |
                         bindings = <
    &kp ESC   &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   &kp SEMI &kp BSLH
    &kp BSPC  &kp A &kp R &kp S &kp T &kp G   &kp M &kp N  &kp E     &kp I   &kp O    &kp SQT
    &kp LCTRL &kp Z &kp X &kp C &kp D &kp V   &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &mt LALT GRAVE
-   &mt LGUI DEL &mt LSHFT SPACE &mo NUMBER   &mo SYMBOL &kp RET &kp TAB
+   &mt LGUI DEL &mt LSHFT SPACE &mo LYR_NUM  &mo LYR_NAV &kp RET &kp TAB
                         >;
                 };
 
@@ -50,14 +50,14 @@
                 nav_layer {
                         label = "NAV";
 // -----------------------------------------------------------------------------------------
-// |      |     |     | UP  |     |     |   |     | PGUP| HOME|     |     |      |
-// |      |     | LT  | DN  | RT  |     |   |     | PGDN| END |     |     |      |
+// |      |     |     | UP  |     |     |   |     | PGUP| HOME| BACK|     |      |
+// |      |     | LT  | DN  | RT  |     |   |     | PGDN| END | FWD |     |      |
 // |      |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
-   &trans  &trans   &trans   &kp UP   &trans    &trans      &trans  &kp PG_UP &kp HOME &trans  &trans  &trans
-   &trans  &trans   &kp LEFT &kp DOWN &kp RIGHT &trans      &trans  &kp PG_DN &kp END  &trans  &trans  &trans
-   &trans  &trans   &trans   &trans   &trans    &trans      &trans  &trans    &trans   &trans  &trans  &trans
+   &trans  &trans   &trans   &kp UP   &trans    &trans      &trans  &kp PG_UP &kp HOME &kp K_BACK    &trans  &trans
+   &trans  &trans   &kp LEFT &kp DOWN &kp RIGHT &trans      &trans  &kp PG_DN &kp END  &kp K_FORWARD &trans  &trans
+   &trans  &trans   &trans   &trans   &trans    &trans      &trans  &trans    &trans   &trans        &trans  &trans
                     	     &trans   &trans    &trans      &trans  &trans    &trans
                         >;
                 };
@@ -84,8 +84,8 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
-            if-layers = <NUMBER SYMBOL>;
-            then-layer = <ADJUST>;
+            if-layers = <LYR_NUM LYR_NAV>;
+            then-layer = <LYR_ADJ>;
         };
     };
 };
