@@ -51,15 +51,15 @@
                 nav_layer {
                         label = "NAV";
 // -----------------------------------------------------------------------------------------
-// |      |     |     | UP  |     |     |   |     | PGUP| HOME| BACK|     |      |
-// |      |     | LT  | DN  | RT  |     |   |     | PGDN| END | FWD |     |      |
+// |      |     | BACK| HOME| PGUP|     |   |     |     | UP  |     |     |      |
+// |      |     | FWD | END | PGDN|     |   |     | LT  | DN  | RT  |     |      |
 // |      |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
-   &trans  &trans  &trans   &kp UP   &trans    &trans      &trans  &kp PG_UP &kp HOME &kp C_AC_BACK    &trans  &trans
-   &trans  &trans  &kp LEFT &kp DOWN &kp RIGHT &trans      &trans  &kp PG_DN &kp END  &kp C_AC_FORWARD &trans  &trans
-   &trans  &trans  &trans   &trans   &trans    &trans      &trans  &trans    &trans   &trans           &trans  &trans
-                    	    &trans   &trans    &trans      &trans  &trans    &trans
+   &trans  &trans  &kp C_AC_BACK    &kp HOME &kp PG_UP &trans      &trans  &trans   &kp UP   &trans    &trans  &trans
+   &trans  &trans  &kp C_AC_FORWARD &kp END  &kp PG_DN &trans      &trans  &kp LEFT &kp DOWN &kp RIGHT &trans  &trans
+   &trans  &trans  &trans           &trans   &trans    &trans      &trans  &trans   &trans   &trans    &trans  &trans
+                    	            &trans   &trans    &trans      &trans  &trans   &trans
                         >;
                 };
 
