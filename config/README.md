@@ -36,6 +36,9 @@ switched back to QWERTY with no issues. The modifier
 keys take up mostly familiar positions on the outer
 columns, and stay the same on all layers for easy
 combination with numbers, symbols, and each other.
+All of the modifier buttons can easily be swapped
+around to individual preference, if other positions
+feel more natural.
 
 The primary "innovation" which enables the rest of
 this setup is that the thumb Space and Enter keys
@@ -46,7 +49,10 @@ shifted symbols on any layer with either hand.
 The concept is similar to the dual-thumb-key layers
 in the [Seniply](https://stevep99.github.io/seniply/)
 layout, except the "dual" key is just Shift fulfilling
-its normal role. 
+its normal role. In order to allow for holding the
+spacebar or Enter key when needed,
+[quick-tap](https://zmk.dev/docs/behaviors/hold-tap#quick-tap-ms)
+is enabled.
 
 ### Numbers and Symbols
 
@@ -54,14 +60,14 @@ its normal role.
 ------------------------------------------------------------------------------
 |      | F1  | F2  | F3  | F4  | F5  |   | F6  | F7  | F8  | F9  | F10 |     |
 |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |  `  |
-|      | F11 | F12 |  [  |  ]  | SPC |   | RET |  -  |  =  |  \  |     |     |
+|      | F11 | F12 |  [  |  ]  |     |   |     |  -  |  =  |  \  |     |     |
                    |     |     |     |   |     |     |     |
 ```
 
-Rather than creating a numpad layout for numerals 
+Rather than creating a numpad layout for numerals
 and inventing symbol locations from scratch, we just
 place a number row straight across the home row, and
-use Shift to access the standard associated symbols. 
+use Shift to access the standard associated symbols.
 Shifted symbols can be typed either using the Num
 button on the left along with the right Shift key,
 or by pressing both Num and Shift together with the
@@ -74,12 +80,6 @@ on the bottom row. The backtick goes over the
 quote character on the base layer, but this can be
 moved below the `0` key if you prefer pinky downward
 curls instead of outward shift. 
-
-As a concession to the occasional need to mash the
-Spacebar or Enter keys this layer also holds non
-mod-tap versions of those, near the primary ones.
-This may be obviated by the use of the 'tap-unless-interrupted'
-behavior in ZMK, needs testing. 
 
 ### Navigation layer
 
