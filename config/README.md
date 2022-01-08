@@ -26,8 +26,8 @@ exception (more on that below).
 --------------------------------------------------------------------------------
 | ESC  |  Q  |  W  |  F  |  P  |  B  |     |  J  |  L  |  U  |  Y  |  ;  | DEL |
 | BKSP |  A  |  R  |  S  |  T  |  G  |     |  M  |  N  |  E  |  I  |  O  |  '  |
-| CTRL |  Z  |  X  |  C  |  D  |  V  |     |  K  |  H  |  ,  |  .  |  /  | ALT |
-               | GUI | NUM | SHF/SPC |     | SHF/RET | NAV | TAB |
+| CTRL |  Z  |  X  |  C  |  D  |  V  |     |  K  |  H  |  ,  |  .  |  /  | GUI |
+               | ALT | NUM | SHF/SPC |     | SHF/RET | NAV | TAB |
                          \-------------ADJ-------------/
 ```
 
