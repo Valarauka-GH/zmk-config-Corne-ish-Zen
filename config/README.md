@@ -45,6 +45,10 @@ this setup is that the thumb Space and Enter keys
 double as Shifts when held down. This allows for
 comfortable typing of capital letters as well as
 shifted symbols on any layer with either hand.
+Since the layer keys are adjacent to the Shifts,
+shifted symbols can be typed either using the Shift
+key on the opposite hand, or by pressing a layer key
+and Shift together with same thumb as a chord.
 
 The concept is similar to the dual-thumb-key layers
 in the [Seniply](https://stevep99.github.io/seniply/)
@@ -68,18 +72,14 @@ Rather than creating a numpad layout for numerals
 and inventing symbol locations from scratch, we just
 place a number row straight across the home row, and
 use Shift to access the standard associated symbols.
-Shifted symbols can be typed either using the Num
-button on the left along with the right Shift key,
-or by pressing both Num and Shift together with the
-left thumb as a chord. 
-
 The F-keys also go on the same layer, above the 
-number row as usual. Only the farthest symbol
-and F-keys have to move, to comfortable positions
-on the bottom row. The backtick goes over the
-quote character on the base layer, but this can be
-moved below the `0` key if you prefer pinky downward
-curls instead of outward shift. 
+number row as usual. 
+
+Only the farthest symbol and F-keys have to move,
+to comfortable positions on the bottom row. The
+backtick goes over the quote character on the base
+layer, but this can be moved below the `0` key if you
+prefer pinky downward curls instead of outward shift.
 
 ### Navigation layer
 
