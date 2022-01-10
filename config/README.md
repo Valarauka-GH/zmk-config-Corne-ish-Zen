@@ -107,8 +107,8 @@ preferred shortcut or launcher keys.
 
 ```
 -------------------------------------------------------------------------------
-| RESET|     |     |     |     |     |   |     |VL_UP|PREV |BR_UP|     |      |
-| BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   |     |VL_DN|NEXT |BR_DN|     |      |
+| RESET|     |     |     |     |     |   |BASE |VL_UP|PREV |BR_UP|     |      |
+| BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   |GAME |VL_DN|NEXT |BR_DN|     |      |
 | CAPS |     |     |     |     |     |   |     |MUTE | P/P |     |     |      |
                    |     |     |     |   |     |     |     |
 ```
@@ -117,3 +117,23 @@ This is a "combo" layer, accessed by holding down
 both layer keys, and holds keyboard, machine, and
 media controls. Can be customized to preference,
 or even omitted entirely.
+
+### Bonus: Game layer
+
+```
+---------------------------------------------------------------------------------
+| TAB  |  Q  |  W  |  E  |  R  |  T  |     |  Y  |  U  |  I  |  O  |  P  | BSPC |
+| SHFT |  A  |  S  |  D  |  F  |  G  |     |  H  |  J  |  K  |  L  |  ;  |  '   |
+| CTRL |  Z  |  X  |  C  |  V  |  B  |     |  N  |  M  |  ,  |  .  |  /  | GUI  |
+                   | ALT | NUM | SPC |     | RET | NAV | ESC |
+```
+
+This remaps the alpha positions to the default QWERTY layout,
+moves some modifiers back to more traditional positions, and
+removes the mod-tap from the Space and Enter keys to allow them
+to be held directly, primarily to allow the left half to be
+used as a gaming keyboard without needing to remap everything.
+The 1-5 numeral and F-keys are easily accessible via the NUM layer.
+
+This layer is numerically below all layers except the base so they
+can still be used normally, and is toggled via the Adjust layer.
